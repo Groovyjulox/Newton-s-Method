@@ -1,0 +1,14 @@
+def newton(a,b,c):
+    n = 1
+    threshold = .001
+    approximation = ((n - (n**3+a*n**2+b*n+c))/(3*n**2+b))
+    while True:
+        better = .5 * ((approximation+n)/(approximation))
+        approximation = better
+        if abs(approximation - better) < threshold:
+            print(better)
+            break
+        
+     
+
+print(newton(6,11,6))
